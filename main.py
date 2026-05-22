@@ -1,10 +1,13 @@
-meme_dict = {
-            "CRINGE": "Algo vergonhoso ou constrangedor",
-            "STALKEAR": "Investigar a vida de alguém online",
-            }
+import random
 
 
-word = input("Digite uma palavra moderna que você não entende (escreva todo a palavra em letras maiúsculas): ")
+elements = "+-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
-if word in meme_dict.keys():
-   
+senhacarct = int(input("Insira a quantidade de caracteres: "))
+
+senha = ""
+
+for i in range (senhacarct):
+senha += random.choice(elements)
+
+print("Essa é sua senha: " + senha)
